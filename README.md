@@ -25,6 +25,7 @@ The application is built with the following dependencies:
 * Maven to manage build, tests and dependencies  
 * Git for versioning    
 * Java 8  
+* Jax-ws  
 * PostgreSQL 42.2.19 for Database  
 * Hibernate 5.4.30.Final  
 
