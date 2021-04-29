@@ -1,2 +1,0 @@
-# merchant-application
-Merchant application
