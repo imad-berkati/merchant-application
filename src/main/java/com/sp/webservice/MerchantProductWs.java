@@ -34,6 +34,7 @@ public class MerchantProductWs {
 
         if (!merchantEntity.isPresent() || !productEntity.isPresent()) {
             // TODO handle exception
+            return;
         }
 
         MerchantProductEntity merchantProductEntity = new MerchantProductEntity();
