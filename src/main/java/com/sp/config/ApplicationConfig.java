@@ -1,5 +1,14 @@
 package com.sp.config;
 
+import com.sp.dao.MerchantProductRepositoryImpl;
+import com.sp.dao.MerchantRepositoryImpl;
+import com.sp.dao.ProductRepositoryImpl;
+import com.sp.service.MerchantProductService;
+import com.sp.service.MerchantService;
+import com.sp.service.ProductService;
+import com.sp.webservice.MerchantProductWs;
+import com.sp.webservice.MerchantWs;
+import com.sp.webservice.ProductWs;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,6 +66,53 @@ public class ApplicationConfig {
         hibernateProperties.setProperty("hibernate.hbm2ddl.auto", environment.getProperty("hibernate.hbm2ddl.auto"));
         hibernateProperties.setProperty("hibernate.dialect", environment.getProperty("hibernate.dialect"));
         return hibernateProperties;
+    }
+
+    // Spring Beans
+
+    @Bean
+    public MerchantService merchantService() {
+        return new MerchantService();
+    }
+
+    @Bean
+    public MerchantRepositoryImpl merchantRepository() {
+        return new MerchantRepositoryImpl();
+    }
+
+    @Bean
+    public ProductService productService() {
+        return new ProductService();
+    }
+
+    @Bean
+    public ProductRepositoryImpl productRepository() {
+        return new ProductRepositoryImpl();
+    }
+
+    @Bean
+    public MerchantProductRepositoryImpl merchantProductRepository() {
+        return new MerchantProductRepositoryImpl();
+    }
+
+    @Bean
+    public MerchantProductService merchantProductService() {
+        return new MerchantProductService();
+    }
+
+    @Bean
+    public ProductWs productWs() {
+        return new ProductWs();
+    }
+
+    @Bean
+    public MerchantWs merchantWs() {
+        return new MerchantWs();
+    }
+
+    @Bean
+    public MerchantProductWs merchantProductWs() {
+        return new MerchantProductWs();
     }
 
 }
