@@ -33,7 +33,7 @@ The application is built with the following dependencies:
 1 - Create Database `merchant-database` in your PostgreSQL  
 2 - Open the file `sql-queries.sql` in your PostgreSQL and run it to create Database tables  
 3 - Clone the repository in your workspace `git clone https://github.com/imad-berkati/merchant-application.git`  
-4 - Run this maven command in your project root directory `mvn exec:java`  
+4 - Run this maven command in your project root directory `mvn install exec:java`  
 5 - Use SoapUI to test webservices  
 Note:  
 Make sure your `8686` port is not already in use.  
